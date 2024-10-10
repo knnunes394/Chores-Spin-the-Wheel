@@ -4,13 +4,13 @@ const finalValue = document.getElementById("final");
 
 //Object that stores values of min and max angle for a value
 const rotationValues = [
-	{ minDeg: 0, maxDeg: 30, value: 1 },
-	{ minDeg: 31, maxDeg: 90, value: 2 },
-	{ minDeg: 91, maxDeg: 150, value: 3 },
-	{ minDeg: 151, maxDeg: 210, value: 4 },
-	{ minDeg: 211, maxDeg: 270, value: 5 },
-	{ minDeg: 271, maxDeg: 330, value: 6 },
-	{ minDeg: 331, maxDeg: 360, value: 1 },
+	{ minDeg: 0, maxDeg: 30, value: 2 },
+	{ minDeg: 31, maxDeg: 90, value: 1 },
+	{ minDeg: 91, maxDeg: 150, value: 6 },
+	{ minDeg: 151, maxDeg: 210, value: 5 },
+	{ minDeg: 211, maxDeg: 270, value: 4 },
+	{ minDeg: 271, maxDeg: 330, value: 3 },
+	{ minDeg: 331, maxDeg: 360, value: 2 },
 ];
 
 //Size of each piece
