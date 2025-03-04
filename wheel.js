@@ -39,6 +39,7 @@ let myChart - new Chart(wheel, {
 			},
 		],
 	}
+},
 
 options: {
 	responsive: true,
