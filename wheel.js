@@ -9,19 +9,19 @@ const finalValue = document.getElementById("final");
 */
 
 const rotationVal = [
-	{ minDeg: 0, maxDeg: 30, value: 3 },
-	{ minDeg: 31, maxDeg: 60, value: 2 },
-	{ minDeg: 61, maxDeg: 90, value: 1 },
-	{ minDeg: 91, maxDeg: 120, value: 12 },
-	{ minDeg: 121, maxDeg: 150, value: 11 },
-	{ minDeg: 151, maxDeg: 180, value: 10 },
-	{ minDeg: 181, maxDeg: 210, value: 9 },
-	{ minDeg: 211, maxDeg: 240, value: 8 },
-	{ minDeg: 241, maxDeg: 270, value: 7 },
-	{ minDeg: 271, maxDeg: 300, value: 6 },
-	{ minDeg: 301, maxDeg: 330 value: 5 },
-	{ minDeg: 331, maxDeg: 360, value: 4 },
-	{ minDeg: 331, maxDeg: 360, value: 3 },
+	{ minDeg: 0, maxDeg: 15, value: 3 },
+	{ minDeg: 16, maxDeg: 45, value: 2 },
+	{ minDeg: 46, maxDeg: 75, value: 1 },
+	{ minDeg: 76, maxDeg: 105, value: 12 },
+	{ minDeg: 106, maxDeg: 135, value: 11 },
+	{ minDeg: 136, maxDeg: 165, value: 10 },
+	{ minDeg: 166, maxDeg: 195, value: 9 },
+	{ minDeg: 196, maxDeg: 225, value: 8 },
+	{ minDeg: 226, maxDeg: 255, value: 7 },
+	{ minDeg: 256, maxDeg: 285, value: 6 },
+	{ minDeg: 286, maxDeg: 315, value: 5 },
+	{ minDeg: 316, maxDeg: 345, value: 4 },
+	{ minDeg: 346, maxDeg: 360, value: 3 },
 
 
 ];
