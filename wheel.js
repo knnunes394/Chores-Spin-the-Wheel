@@ -46,33 +46,33 @@ var pieColors = [
 ];
 
 //create chart
-let myChart - new Chart(wheel, {
+let myChart = new Chart(wheel, {
 	plugins: [ChartDataLabels],
 	type: "pie",
 	data: {
 		labels: [1,2,3,4,5,6,7,8,9,10,11,12],
 		datasets: [
 			{
-				backgroundColor: pieColors,
-				data: data,
+			backgroundColor: pieColors,
+			data: data,
 			},
 		],
-	}
-
+	},
 options: {
 	responsive: true,
 	animation: { duration: 0},
 	plugins: {
-		tooltip: false;
+		tooltip: false,
 		legend: {
-			display: false,
+		  display: false,
 		},
 		datalabels: {
 			color: "#ffffff",
 			 formatter: (_, context) => context.chart.data.labels[context.dataIndex],
 			font: { size: 24 },
-		},
+		},	
 	},
+  },
 });
 
 
