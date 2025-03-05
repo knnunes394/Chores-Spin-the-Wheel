@@ -26,6 +26,12 @@ var pieColors = [
 	"#FFC300", 
 ];
 
+window.addEventListener("final-value", function(){
+	document.getElementByID("final-value").innerHTML = "Rawr";
+});
+	
+
+
 //create chart
 let myChart = new Chart(wheel, {
 	plugins: [ChartDataLabels],
