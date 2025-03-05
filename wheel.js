@@ -27,7 +27,7 @@ var pieColors = [
 ];
 
 window.addEventListener("final-value", function(){
-	document.getElementByID("final-value").innerHTML = "Rawr";
+	document.getElementByID("spin").innerHTML = "Rawr";
 });
 	
 
