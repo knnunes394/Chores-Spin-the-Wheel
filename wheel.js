@@ -1,6 +1,6 @@
 const wheel = document.getElementById("wheel");
-const spinButton = document.getElementById("spin-but");
-const finalValue = document.getElementById("final");
+const spinButton = document.getElementById("spin");
+const finalValue = document.getElementById("final-value");
 
 //Object that stores values of min and max angle for a value
 const rotationValues = [
@@ -26,12 +26,7 @@ var pieColors = [
 	"#FFC300", 
 ];
 
-window.addEventListener("final-value", function(){
-	document.getElementByID("spin").innerHTML = "Rawr";
-});
 	
-
-
 //create chart
 let myChart = new Chart(wheel, {
 	plugins: [ChartDataLabels],
@@ -61,6 +56,7 @@ options: {
 	},
   },
 });
+
 //display value based on the randomAngle
 const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
@@ -104,8 +100,8 @@ spinButton.addEventListener("click", () => {
       count = 0;
       resultValue = 101;
     }
-  }, 10);
+    
+  },);
 });
-
 
 
