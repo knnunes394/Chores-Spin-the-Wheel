@@ -1,69 +1,70 @@
 const wheel = document.getElementById("wheel");
-const spinButton = document.getElementById("spin");
+const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
-
-//Object that stores values of min and max angle for a value
+//Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
-	{ minDeg: 0, maxDeg: 30, value: 2 },
-	{ minDeg: 31, maxDeg: 90, value: 1 },
-	{ minDeg: 91, maxDeg: 150, value: 6 },
-	{ minDeg: 151, maxDeg: 210, value: 5 },
-	{ minDeg: 211, maxDeg: 270, value: 4 },
-	{ minDeg: 271, maxDeg: 330, value: 3 },
-	{ minDeg: 331, maxDeg: 360, value: 2 },
+  { minDegree: 0, maxDegree: 30, value: 2 },
+  { minDegree: 31, maxDegree: 90, value: 1 },
+  { minDegree: 91, maxDegree: 150, value: 6 },
+  { minDegree: 151, maxDegree: 210, value: 5 },
+  { minDegree: 211, maxDegree: 270, value: 4 },
+  { minDegree: 271, maxDegree: 330, value: 3 },
+  { minDegree: 331, maxDegree: 360, value: 2 },
 ];
-
 //Size of each piece
-const data = [16,16,16,16,16,16]; //doesn't have to equal 100
-
-//background color of each piece
+const data = [16, 16, 16, 16, 16, 16];
+//background color for each piece
 var pieColors = [
-	"#56e119",
-	"#FFC300",
-	"#56e119",
-	"#FFC300", 
-	"#56e119",
-	"#FFC300", 
+  "#8b35bc",
+  "#b163da",
+  "#8b35bc",
+  "#b163da",
+  "#8b35bc",
+  "#b163da",
 ];
-
-	
-//create chart
+//Create chart
 let myChart = new Chart(wheel, {
-	plugins: [ChartDataLabels],
-	type: "pie",
-	data: {
-		labels: [1,2,3,4,5,6],
-		datasets: [
-			{
-			backgroundColor: pieColors,
-			data: data,
-			},
-		],
-	},
-options: {
-	responsive: true,
-	animation: { duration: 0},
-	plugins: {
-		tooltip: false,
-		legend: {
-		  display: false,
-		},
-		datalabels: {
-			color: "#ffffff",
-			 formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-			font: { size: 24 },
-		},	
-	},
+  //Plugin for displaying text on pie chart
+  plugins: [ChartDataLabels],
+  //Chart Type Pie
+  type: "pie",
+  data: {
+    //Labels(values which are to be displayed on chart)
+    labels: [1, 2, 3, 4, 5, 6],
+    //Settings for dataset/pie
+    datasets: [
+      {
+        backgroundColor: pieColors,
+        data: data,
+      },
+    ],
+  },
+  options: {
+    //Responsive chart
+    responsive: true,
+    animation: { duration: 0 },
+    plugins: {
+      //hide tooltip and legend
+      tooltip: false,
+      legend: {
+        display: false,
+      },
+      //display labels inside pie chart
+      datalabels: {
+        color: "#ffffff",
+        formatter: (_, context) => context.chart.data.labels[context.dataIndex],
+        font: { size: 24 },
+      },
+    },
   },
 });
-
 //display value based on the randomAngle
 const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     //if the angleValue is between min and max then display it
-    if (angleValue >= i.minDeg && angleValue <= i.maxDeg) {
+    if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
       finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
-      spinButton.disabled = false;
+      spinBtn.disabled = false;
       break;
     }
   }
@@ -74,8 +75,8 @@ let count = 0;
 //100 rotations for animation and last rotation for result
 let resultValue = 101;
 //Start spinning
-spinButton.addEventListener("click", () => {
-  spinButton.disabled = true;
+spinBtn.addEventListener("click", () => {
+  spinBtn.disabled = true;
   //Empty final value
   finalValue.innerHTML = `<p>Good Luck!</p>`;
   //Generate random degrees to stop at
@@ -100,8 +101,6 @@ spinButton.addEventListener("click", () => {
       count = 0;
       resultValue = 101;
     }
-    
-  },);
+  }, 10);
 });
-
 
